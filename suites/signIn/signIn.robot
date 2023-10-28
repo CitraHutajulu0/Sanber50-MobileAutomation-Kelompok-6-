@@ -1,8 +1,8 @@
 *** Settings ***
-Resource      ../../pageObjects/base/base.robot
-Resource      ../../pageObjects/signInPage/signInPage.robot
-Resource    ../../pageObjects/homePage/homePage.robot
-Resource    ../../pageObjects/dashboardPage/dashboardPage.robot
+Resource        ../../pageObjects/base/base.robot
+Resource        ../../pageObjects/signInPage/signInPage.robot
+Resource        ../../pageObjects/homePage/homePage.robot
+Resource        ../../pageObjects/dashboardPage/dashboardPage.robot
 
 *** Test Cases ***
 Verify Login Successfully - Valid User Name and Valid Password

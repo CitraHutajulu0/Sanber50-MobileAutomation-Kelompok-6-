@@ -1,6 +1,6 @@
 *** Settings ***
-Variables        homePage-locators.yaml
-Resource         ../base/base.robot
+Variables                            homePage-locators.yaml
+Resource                             ../base/base.robot
 
 *** Keywords ***
 
@@ -11,4 +11,4 @@ Verify Homepage Appears
     Wait Until Element Is Visible    ${checkInButton}
 
 Click Sign In on Homepage
-    Click Element    ${signInButton}
+    Click Element                    ${signInButton}
