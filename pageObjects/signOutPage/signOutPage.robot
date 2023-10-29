@@ -6,34 +6,23 @@ Resource                             ../base/base.robot
 
 Verify Sign In Page Appears
     Wait Until Element Is Visible    ${appLogo2}
-    Wait Until Element Is Visible    ${signInButton2}
-    Wait Until Element Is Visible    ${userNameField}
-    Wait Until Element Is Visible    ${passwordField}
+    Wait Until Element Is Visible    ${signOutButton4}
 
-Input Valid User Name
-    Input Text                        ${userNameField}    support@ngendigital.com
+Open Application    
+        ${APP_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP_PATH}
 
-Input Invalid User Name
-    Input Text                        ${userNameField}    emailtes@gmail.com
+Wait Until Element Is Visible    
+        ${Logout Button Locator}    timeout=30 seconds
 
-Input Empty User Name
-    Input Text                        ${userNameField}    ${EMPTY}
+Click Element    
+        ${Logout Button Locator}
 
-Input Valid Password 
-    Input Password                    ${passwordField}    abc123
+Wait Until Element Is Visible    
+        ${Confirm Logout Button Locator}    timeout=30 seconds
 
-Input Invalid Password
-    Input Password                    ${passwordField}    Akuntes1
+Click Element    
+        ${Confirm Logout Button Locator}
 
-Input Empty Password 
-    Input Text                        ${userNameField}    ${EMPTY}
-
-Click Sign In Button 
-    Click Element                     ${signInButton2}
-
-
-# Verify Invalid Toast Message
-#     Wait Until Element Is Visible   ${invalidMessage}
-#     Element Text Should Be          ${invalidMessage}   Invalid username/password
-#  (Belum tau cara mengambil variable toast message)
-
+Wait Until Element Is Visible    
+        ${Login Button Locator}    timeout=30 seconds
+Close Application
