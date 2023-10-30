@@ -7,3 +7,6 @@ Verify Dashboard Page Appears
     Wait Until Element Is Visible    ${userName}
     Wait Until Element Is Visible    ${signOutButton}
     Element Text Should Be           ${signOutButton}    Sign Out
+
+Click Sign Out Button 
+    Click Element    ${signOutButton}
