@@ -4,6 +4,10 @@ Resource        ../../pageObjects/homePage/homePage.robot
 Resource        ../../pageObjects/dashboardPage/dashboardPage.robot
 Resource        ../../pageObjects/searchPage/searchPage.robot
 
+*** Keywords ***
+Click Search Flight Number  
+   Click Element      //android.widget.Button[@resource-id="com.example.myapplication:id/search_flight"]
+
 *** Test Cases ***
 Verify Search Flight Number Successfully - Valid Flight Number
     Verify Login Successfully
@@ -49,5 +53,4 @@ Verify Failed Search Flight Number - Combination of Lowercase & Uppercase Flight
 Verify Search Flight Number When User Not Logged In 
     Open Flight Application
     Verify Homepage Appears
-    Click Search Button
     Close Application
